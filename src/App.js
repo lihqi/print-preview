@@ -5,7 +5,7 @@ import "./App.css";
 import PrintModal from "./PrintModal";
 const testOptions = [
   {
-    name: "选项1",
+    name: "选项13434343",
     value: "option1"
   },
   {
