@@ -1,0 +1,134 @@
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.print-modal {
+  border: 1px solid black;
+  position: relative;
+}
+
+.print-set {
+  width: 200px;
+  height: 467px;
+  border-right: 1px solid black;
+  padding: 7px 10px 10px 10px;
+  float: left;
+}
+
+.print-set .tmp-A4 {
+  margin-bottom: 10px;
+  padding-left: 3px;
+  border: 1px solid #a9a9a9
+}
+.print-set fieldset {
+  border-width: 1px;
+  padding: 7px 10px 0 10px;
+}
+.print-set .name-value-text {
+  border: 1px solid #a9a9a9;
+  background: #ebebe4;
+  height: 25px;
+  line-height: 25px;
+}
+.print-set div {
+  margin-bottom: 5px;
+}
+.print-set .icon-container {
+  font-size: 18px;
+  display: inline;
+  position: relative;
+  top: 3px;
+  left: 10px;
+  cursor: pointer;
+}
+.print-preview-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: calc(100% - 200px);
+  background: #e4e4e4;
+  overflow: auto;
+}
+.print-preview {
+  width: 100px;
+  height: 100px;
+}
+.A4-page-size {
+  width: 105mm;
+  height: 148.5mm;
+  max-height: 148.5mm;
+  background: white;
+  border: 1px solid black;
+  margin: 10px auto;
+  overflow: hidden;
+}
+.A4-page-size .A4-page-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.A4-page-size .QR-code-container {
+  font-size: 0;
+}
+.A4-page-size p {
+  text-align: center;
+}
+.p1X1 img {
+  width: 59mm;
+  height: 59mm;
+}
+.p1X1 p {
+  font-size: 20px;
+  height: 30px;
+  line-height: 30px;
+  margin-top: 10px;
+}
+.p1X2 img {
+  width: 48.88mm;
+  height: 48.88mm;
+}
+.p1X2 .empty-content {
+  width: 48.88mm;
+  height: 48.88mm;
+}
+.p1X2 p {
+  font-size: 18px;
+  height: 30px;
+  line-height: 30px;
+  margin-top: 5px;
+}
+.p2X3 img {
+  width: 32mm;
+  height: 32mm;
+}
+.p2X3 .empty-content {
+  width: 32mm;
+  height: 32mm;
+}
+.p2X3 p {
+  font-size: 16px;
+  height: 30px;
+  line-height: 30px;
+  margin-top: 2px;
+}
+.p3X4 img {
+  width: 23.53mm;
+  height: 23.53mm;
+}
+.p3X4 .empty-content {
+  width: 23.53mm;
+  height: 23.53mm;
+}
+.p3X4 p {
+  font-size: 12px;
+  height: 30px;
+  line-height: 30px;
+}
+.empty-container {
+  opacity: 0;
+}
