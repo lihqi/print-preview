@@ -8,6 +8,7 @@ const QRCodeContainerMap = {
 };
 class PrintPreview extends Component {
   render() {
+    console.log(JSON.stringify(this.props))
     const {
       composingStyle,
       allData

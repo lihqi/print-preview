@@ -14,7 +14,7 @@ class PrintModal extends Component {
         width="230mm"
         style={{ top: 20 }}
       >
-        <div className="print-modal clearfix">
+        <div className="print-query-code-modal clearfix">
           <PrintSet {...this.props} />
           <div className="print-preview-container">
             <PrintPreview {...this.props} />
