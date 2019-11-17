@@ -1,40 +1,30 @@
 import React, { Component } from "react";
-import { Select, InputNumber, Icon } from "antd";
+import { Select, InputNumber } from "antd";
 const Option = Select.Option;
 
-const pageSizes = ["A4", "A3", "B5", "A5"];
+// const pageSizes = ["A4", "A3", "B5", "A5"];
 const composingStyles = ["1X1", "1X2", "2X3", "3X4"];
 const numbersMap = {
   "0": "一",
   "1": "二",
   "2": "三"
 };
-let throttle = function(fn, delay) {
-  let timer = null;
-  return function() {
-    let context = this,
-      args = arguments;
-    clearTimeout(timer);
-    timer = setTimeout(function() {
-      fn.apply(context, args);
-    }, delay);
-  };
-};
+
 class PrintSet extends Component {
   render() {
     const {
       changePageMargin,
-      changePageSize,
+      // changePageSize,
       pageMarginBottom,
       pageMarginLeft,
       pageMarginRight,
       pageMarginTop,
-      pageSize,
+      // pageSize,
       composingStyle,
       changeComposingStyle,
       nameValues,
-      addNameValue,
-      removeNameValue,
+      // addNameValue,
+      // removeNameValue,
       selectNameValue,
       options
     } = this.props;
@@ -61,7 +51,7 @@ class PrintSet extends Component {
         <fieldset>
           <legend>页边距</legend>
           <div>
-            上:{" "}
+            上:
             <InputNumber
               size="small"
               precision={2}
@@ -74,7 +64,7 @@ class PrintSet extends Component {
             厘米
           </div>
           <div>
-            下:{" "}
+            下:
             <InputNumber
               size="small"
               precision={2}
@@ -87,7 +77,7 @@ class PrintSet extends Component {
             厘米
           </div>
           <div>
-            左:{" "}
+            左:
             <InputNumber
               size="small"
               precision={2}
@@ -100,7 +90,7 @@ class PrintSet extends Component {
             厘米
           </div>
           <div>
-            右:{" "}
+            右:
             <InputNumber
               size="small"
               precision={2}
@@ -148,7 +138,7 @@ class PrintSet extends Component {
           </div>
           <div>
             {nameValues.map((nameValue, index) => {
-              let icon=null;
+              let icon = null;
               // if (index < 1) {
               //   icon = (
               //     <Icon

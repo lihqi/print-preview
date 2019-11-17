@@ -26,7 +26,7 @@ class PageSizeContainer extends Component {
           {oneItem.map((oneData, oneDataIndex) => {
             return (
               <div className="QR-code-container" key={oneDataIndex}>
-                <img src={oneData.src} />
+                <img src={oneData.src} alt={oneDataIndex} />
                 <p>数据标题数据...</p>
               </div>
             );

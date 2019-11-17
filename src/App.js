@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 
-import { Button, message } from "antd";
+import { message } from "antd";
 import "./App.css";
 import PrintModal from "./PrintModal";
+
 const testOptions = [
   {
     name: "选项13434343",
@@ -121,14 +122,14 @@ class App extends Component {
       removeNameValue: this.removeNameValue.bind(this),
       selectNameValue: this.selectNameValue.bind(this),
       options: testOptions,
-      allData:testData,
+      allData: testData,
       onCancel() {
         me.setState({
           visible: false
         });
       },
       onOk() {
-        window.print()
+        window.print();
         me.setState({
           visible: false
         });
@@ -136,10 +137,7 @@ class App extends Component {
     };
     return (
       <div className="App">
-        <Button type="primary" onClick={this.showModal.bind(this)}>
-          打印预览
-        </Button>
-        {this.state.visible ? <PrintModal {...printModalProps} /> : null}
+        <PrintModal {...printModalProps} />
       </div>
     );
   }

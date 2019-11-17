@@ -1,26 +1,30 @@
 import React, { Component } from "react";
-import { Modal } from "antd";
 import PrintSet from "./PrintSet";
 import PrintPreview from "./PrintPreview";
+import ReactToPrint from "react-to-print";
+import { Button } from "antd";
 class PrintModal extends Component {
   render() {
     return (
-      <Modal
-        title="打印设置"
-        visible={this.props.visible}
-        onOk={this.props.onOk}
-        onCancel={this.props.onCancel}
-        okText="确定"
-        width="230mm"
-        style={{ top: 20 }}
-      >
-        <div className="print-query-code-modal clearfix">
-          <PrintSet {...this.props} />
-          <div className="print-preview-container">
+      <div className="print-query-code-modal clearfix">
+        <PrintSet {...this.props} />
+        <ReactToPrint
+          trigger={() => (
+            <div className="print-btn">
+              <Button>打印</Button>
+            </div>
+          )}
+          content={() => {
+            return this.componentRef;
+          }}
+          bodyClass="print-query-code-iframe"
+        />
+        <div className="print-preview-container">
+          <div ref={el => (this.componentRef = el)}>
             <PrintPreview {...this.props} />
           </div>
         </div>
-      </Modal>
+      </div>
     );
   }
 }

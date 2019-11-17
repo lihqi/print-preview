@@ -8,11 +8,7 @@ const QRCodeContainerMap = {
 };
 class PrintPreview extends Component {
   render() {
-    console.log(JSON.stringify(this.props))
-    const {
-      composingStyle,
-      allData
-    } = this.props;
+    const { composingStyle, allData } = this.props;
     let result = [];
     // 切割allData 每个数组data的个数
     const itemLength = QRCodeContainerMap[composingStyle];
