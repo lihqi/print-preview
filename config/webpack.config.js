@@ -414,7 +414,7 @@ module.exports = function(webpackEnv) {
                   [
                     "import",
                     {
-                      libraryName: "antd-mobile",
+                      libraryName: "antd",
                       libraryDirectory: "es",
                       style: "css"
                     }
